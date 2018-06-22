@@ -39,13 +39,26 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         const posts = result.data.allContentfulPost.edges;
         posts.forEach((post, idx) => {
-          createPage({
-            path: `/${post.node.topic.slug}/${post.node.slug}-${post.node.id}/`,
-            component: postTemplate,
-            context: {
-              slug: post.node.slug,
-            },
-          });
+          if (
+            post &&
+            post.node &&
+            post.node.slug &&
+            post.node.topic &&
+            post.node.topic.slug
+          ) {
+            createPage({
+              path: `/${post.node.topic.slug}/${post.node.slug}-${
+                post.node.id
+              }/`,
+              component: postTemplate,
+              context: {
+                slug: post.node.slug,
+              },
+            });
+          } else {
+            console.error('Post missing required fields');
+            console.error(post);
+          }
         });
       })
     );
