@@ -18,7 +18,7 @@ const Header = ({ logo }) => (
     </SiteTitle>
     <NavItems>
       <NavItem>
-        <Link to="https://daspdp.org">Back to daspdp</Link>
+        <a href="https://daspdp.org">Back to daspdp</a>
       </NavItem>
     </NavItems>
   </Navbar>
