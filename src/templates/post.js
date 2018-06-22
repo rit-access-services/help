@@ -16,13 +16,14 @@ const PostTemplate = ({ data }) => {
           __html: post.content.childMarkdownRemark.html,
         }}
       />
-      <h3>Related Posts</h3>
+      {post.relatedPosts && <h3>Related Posts</h3>}
       <ul>
-        {post.relatedPosts.map(p => (
-          <li key={`${p.name}-${p.id}`}>
-            <Link to={`/${p.topic.slug}/${p.slug}-${p.id}/`}>{p.name}</Link>
-          </li>
-        ))}
+        {post.relatedPosts &&
+          post.relatedPosts.map(p => (
+            <li key={`${p.name}-${p.id}`}>
+              <Link to={`/${p.topic.slug}/${p.slug}-${p.id}/`}>{p.name}</Link>
+            </li>
+          ))}
       </ul>
     </Wrapper>
   );
