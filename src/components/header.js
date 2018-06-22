@@ -18,7 +18,10 @@ const Header = ({ logo }) => (
     </SiteTitle>
     <NavItems>
       <NavItem>
-        <a href="https://daspdp.org">Back to daspdp</a>
+        <a href="https://daspdp.org/about/contact/">Contact Support</a>
+      </NavItem>
+      <NavItem>
+        <a href="https://daspdp.org">Return to daspdp</a>
       </NavItem>
     </NavItems>
   </Navbar>
@@ -35,7 +38,7 @@ const Navbar = styled('div')`
 const Branding = styled('div')`
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   a {
@@ -48,7 +51,7 @@ const Branding = styled('div')`
 `;
 
 const SiteTitle = styled('div')`
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +76,9 @@ const NavItem = styled('li')`
   margin: 0 10px 0;
   a {
     color: #d2dffd;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     text-decoration: none;

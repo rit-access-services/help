@@ -3,9 +3,11 @@ module.exports = {
     title: 'Help | DAS PDP',
     description: 'Help documentation for the DAS PDP website.',
     keywords: 'help, documentation, docs, das, pdp, rit, daspdp',
+    siteUrl: 'https://help.daspdp.org',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-emotion',
       options: {
