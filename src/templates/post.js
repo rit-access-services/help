@@ -4,10 +4,12 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 
+// docSearch-content is a specific class Algolia uses to identify
+// content to parse for search indexing, do not change it or remove.
 const PostTemplate = ({ data }) => {
   const post = data.contentfulPost;
   return (
-    <Wrapper>
+    <Wrapper className="docSearch-content">
       <Helmet title={`${post.name} | ${data.site.siteMetadata.title}`} />
       <Title>{post.name}</Title>
       <TitleMeta>Last modified {post.updatedAt}</TitleMeta>
