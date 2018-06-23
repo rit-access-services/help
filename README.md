@@ -1,26 +1,25 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Help Docs
+
+A [Gatsby.js](https://www.gatsbyjs.org) site using [Contentful](https://contentful.com) API to drive doc generation and [Netlify](https://netlify.com) to host the static site.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
-## Install
+## Setup
 
-Make sure that you have the Gatsby CLI program installed:
+Install dependencies:
+
 ```sh
-npm install --global gatsby-cli
+yarn install
 ```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+Alternatively, `npm install`.
 
-Then you can run it by:
+Run the development server:
+
 ```sh
-cd gatsby-example-site
 gatsby develop
 ```
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rit-access-services/help)
