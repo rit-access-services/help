@@ -17,7 +17,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
-    <Header logo={data.logo} />
+    <Header logo={data.logo} algolia={data.site.siteMetadata.algolia} />
     <Page>
       <Sidebar data={data} />
       <Content>{children()}</Content>
@@ -38,6 +38,10 @@ export const siteMetadataQuery = graphql`
         title
         description
         keywords
+        algolia {
+          apiKey
+          indexName
+        }
       }
     }
     logo: imageSharp(id: { regex: "/2017-pdp-logo-white.png/" }) {

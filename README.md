@@ -20,6 +20,18 @@ Run the development server:
 gatsby develop
 ```
 
+## Algolia DocSearch
+
+We get our document search for free through Algolia, emails about it are on the daspd@rit.edu email
+
+Our config is stored at:
+https://github.com/algolia/docsearch-configs/blob/master/configs/daspdp.json
+
+We can make PRs to that to change the selectors if our content structure significantly changes.
+
+To customize the search check the documentation:
+https://community.algolia.com/docsearch/documentation/
+
 ## Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rit-access-services/help)

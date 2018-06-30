@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
+import Search from './search';
 
-const Header = ({ logo }) => (
+const Header = ({ logo, algolia }) => (
   <Navbar>
     <Branding>
       <Link to="/">
@@ -17,6 +18,9 @@ const Header = ({ logo }) => (
       <h1>DAS PDP Help Docs</h1>
     </SiteTitle>
     <NavItems>
+      <NavItem>
+        <Search algolia={algolia} />
+      </NavItem>
       <NavItem>
         <a href="https://daspdp.org/about/contact/">Contact Support</a>
       </NavItem>

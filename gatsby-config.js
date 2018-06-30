@@ -4,6 +4,10 @@ module.exports = {
     description: 'Help documentation for the DAS PDP website.',
     keywords: 'help, documentation, docs, das, pdp, rit, daspdp',
     siteUrl: 'https://help.daspdp.org',
+    algolia: {
+      apiKey: '44ca70479736c8a36d65a76721f59481',
+      indexName: 'daspdp',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
