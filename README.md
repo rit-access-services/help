@@ -35,3 +35,5 @@ https://community.algolia.com/docsearch/documentation/
 ## Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rit-access-services/help)
+
+Our app is deployed through Netlify, if you are -only- making content updates through Contentful, our Headless CMS provider, they will automatically be published. Otherwise, pushes to master will trigger Netlify to rebuild the site based off the `master` branch.
