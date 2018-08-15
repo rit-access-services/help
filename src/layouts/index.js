@@ -6,7 +6,8 @@ import Header from '../components/header';
 import Page from '../components/page';
 import Sidebar from '../components/sidebar';
 import Content from '../components/content';
-import './index.css';
+import './reset.css';
+import '../shared/globalStyles';
 
 const Layout = ({ children, data }) => (
   <div>
