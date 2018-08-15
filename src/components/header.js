@@ -13,10 +13,8 @@ const Header = ({ logo, algolia }) => (
           width={50 * logo.sizes.aspectRatio}
         />
       </Link>
-    </Branding>
-    <SiteTitle>
       <h1>DAS PDP Help Docs</h1>
-    </SiteTitle>
+    </Branding>
     <NavItems>
       <NavItem
         css={`
@@ -42,7 +40,7 @@ export default Header;
 const Navbar = styled('div')`
   background: #0e1e25;
   display: flex;
-  min-height: 50px;
+  min-height: 80px;
 `;
 
 const Branding = styled('div')`
@@ -58,18 +56,18 @@ const Branding = styled('div')`
   img {
     margin: 0;
   }
-`;
-
-const SiteTitle = styled('div')`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   h1 {
     color: #fff;
     margin: 0;
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 740px) {
+    h1 {
+      display: none;
+    }
+    max-width: 65px;
   }
 `;
 

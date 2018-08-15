@@ -36,6 +36,9 @@ const SidebarWrapper = styled('div')`
   min-width: 300px;
   background-color: #fbfafc;
   min-height: 100vh;
+  @media screen and (max-width: 740px) {
+    display: none;
+  }
 `;
 
 const SidebarNav = styled('ul')`
