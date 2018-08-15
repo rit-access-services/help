@@ -18,14 +18,20 @@ const Header = ({ logo, algolia }) => (
       <h1>DAS PDP Help Docs</h1>
     </SiteTitle>
     <NavItems>
-      <NavItem>
+      <NavItem
+        css={`
+          :hover {
+            border-bottom: 2px solid transparent;
+          }
+        `}
+      >
         <Search algolia={algolia} />
       </NavItem>
-      <NavItem>
-        <a href="https://daspdp.org/about/contact/">Contact Support</a>
+      <NavItem href="https://daspdp.org/about/contact/">
+        <li>Contact Support</li>
       </NavItem>
-      <NavItem>
-        <a href="https://daspdp.org">Return to daspdp</a>
+      <NavItem href="https://daspdp.org">
+        <li>Return to daspdp</li>
       </NavItem>
     </NavItems>
   </Navbar>
@@ -34,7 +40,7 @@ const Header = ({ logo, algolia }) => (
 export default Header;
 
 const Navbar = styled('div')`
-  background: #000;
+  background: #0e1e25;
   display: flex;
   min-height: 50px;
 `;
@@ -76,24 +82,22 @@ const NavItems = styled('ul')`
   margin: 0;
 `;
 
-const NavItem = styled('li')`
-  margin: 0 10px 0;
-  a {
-    color: #d2dffd;
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
-
-  a:hover {
+const NavItem = styled('a')`
+  color: #d2dffd;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 10px;
+  :hover {
     color: #fff;
     border-bottom: 2px solid #fff;
   }
-
-  a:visited {
+  :visited {
     color: #d2dffd;
+  }
+  li {
+    padding: 0 2px;
+    margin: 0;
   }
 `;
