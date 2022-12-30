@@ -7,7 +7,7 @@
     "bluebird": "^3.5.1",
     "emotion": "^9.2.4",
     "emotion-server": "^9.2.4",
-    "gatsby": "^1.9.247",
+    "gatsby": "^5.3.3",
     "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-emotion": "^1.1.17",
